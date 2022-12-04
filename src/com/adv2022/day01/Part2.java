@@ -75,7 +75,6 @@ public class Part2 {
             System.out.println("max 2 elf " + max2Calories);
             System.out.println("max 3 elf " + max3Calories);
 
-
             System.out.println("-------------------SOLUTION-------------------------------------");
             System.out.println("max cal = " + (max1Calories + max2Calories + max3Calories));
             System.out.println("----------------------------------------------------------------");

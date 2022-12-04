@@ -74,7 +74,6 @@ public class Day03 {
                 System.out.println("druhy = " + secondHalf);
                 for (int i = 0; i < firstHalf.length(); i++) {
                     char ch = firstHalf.charAt(i);
-                    //int cis = (int) ch;
 
                     int posi = secondHalf.indexOf(ch);
                     if (posi >= 0) {

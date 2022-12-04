@@ -30,7 +30,7 @@ import java.io.IOException;
  */
 
 public class Part2 {
-    static final int result[] = {0, 3, 6}; // points for result of the game lose/draw/win
+    static final int[] result = {0, 3, 6}; // points for result of the game lose/draw/win
     static final int[][] tab = { // tab[elf's gesture][lose/draw/win] -> points for my gesture necessary for desired result
             {3, 1, 2},
             {1, 2, 3},
@@ -54,7 +54,6 @@ public class Part2 {
 
                 System.out.println("points my_gesture=" + tab[iElf][iMe] + " + game_result=" + result[iMe]);
                 score = score + tab[iElf][iMe] + result[iMe];
-
             }
 
             System.out.println("-------------------SOLUTION-------------------------------------");

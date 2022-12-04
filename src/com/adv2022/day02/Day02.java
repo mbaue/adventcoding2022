@@ -79,7 +79,6 @@ public class Day02 {
                 score = score
                         + tab[iElf][iMe] // result of the game from "table"
                         + iMe + 1; // points for my gesture (columns start from 0, so +1
-
             }
 
             System.out.println("-------------------SOLUTION-------------------------------------");

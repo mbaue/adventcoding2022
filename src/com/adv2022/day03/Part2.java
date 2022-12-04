@@ -105,5 +105,4 @@ public class Part2 {
         inters = inters.stream().filter(c -> s3.contains(c.toString())).collect(Collectors.toList());
         return inters.toString().charAt(1);
     }
-
 }
