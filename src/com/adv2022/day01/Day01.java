@@ -90,7 +90,7 @@ public class Day01 {
             System.out.println("max elf " + maxCalories);
 
             System.out.println("-------------------SOLUTION-------------------------------------");
-            System.out.println("max cal = " + maxCalories );
+            System.out.println("max cal = " + maxCalories);
             System.out.println("----------------------------------------------------------------");
 
             br.close();

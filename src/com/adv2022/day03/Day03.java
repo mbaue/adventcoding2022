@@ -68,9 +68,9 @@ public class Day03 {
                 System.out.println("-------------------------------------");
                 System.out.println(line);
                 int length = line.length();
-                String firstHalf = line.substring(0, length/2 );
+                String firstHalf = line.substring(0, length / 2);
                 System.out.println("prvni = " + firstHalf);
-                String secondHalf = line.substring(length/2);
+                String secondHalf = line.substring(length / 2);
                 System.out.println("druhy = " + secondHalf);
                 for (int i = 0; i < firstHalf.length(); i++) {
                     char ch = firstHalf.charAt(i);
@@ -81,7 +81,7 @@ public class Day03 {
                         int l = LOWER.indexOf(ch);
                         if (l >= 0) {
                             l++;
-                            System.out.println("male "  + l);
+                            System.out.println("male " + l);
                         } else {
                             l = UPPER.indexOf(ch);
                             l += 27;

@@ -77,7 +77,7 @@ public class Day04 {
                 int e1high = Integer.parseInt(assign[1]);
                 int e2low = Integer.parseInt(assign[2]);
                 int e2high = Integer.parseInt(assign[3]);
-                if ((e2low >= e1low) && (e2high <= e1high) || (e1low >= e2low && e1high <= e2high)){
+                if ((e2low >= e1low) && (e2high <= e1high) || (e1low >= e2low && e1high <= e2high)) {
                     sum++;
                 }
             }

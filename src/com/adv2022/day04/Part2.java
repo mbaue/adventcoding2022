@@ -46,7 +46,7 @@ public class Part2 {
                 if ((e1low >= e2low && e1low <= e2high)
                         || (e1high >= e2low && e1high <= e2low)
                         || (e2low >= e1low && e2low <= e1high)
-                        || (e2high >= e1low && e2high <= e1high)){
+                        || (e2high >= e1low && e2high <= e1high)) {
                     sum++;
                 }
             }

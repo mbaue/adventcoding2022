@@ -66,10 +66,10 @@ public class Day06 {
             String line = br.readLine();
             int solution = 0;
 
-            for (int i = 0; i < line.length()-LENGTH_OF_STRING; i++){
-                String s = line.substring(i, i+LENGTH_OF_STRING);
+            for (int i = 0; i < line.length() - LENGTH_OF_STRING; i++) {
+                String s = line.substring(i, i + LENGTH_OF_STRING);
                 if (check(s)) {
-                    solution = i+LENGTH_OF_STRING;
+                    solution = i + LENGTH_OF_STRING;
                     break;
                 }
             }
@@ -84,9 +84,9 @@ public class Day06 {
     }
 
     static boolean check(String s) {
-        for (int i = 0; i < LENGTH_OF_STRING-1; i++) {
+        for (int i = 0; i < LENGTH_OF_STRING - 1; i++) {
             char ch = s.charAt(i);
-            if (s.substring(i+1, LENGTH_OF_STRING).indexOf(ch)>=0){
+            if (s.substring(i + 1, LENGTH_OF_STRING).indexOf(ch) >= 0) {
                 return false;
             }
         }
