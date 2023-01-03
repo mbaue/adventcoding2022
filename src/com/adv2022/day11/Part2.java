@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * https://adventofcode.com/2022/day/11
+ * --- Day 11: Monkey in the Middle ---
  * --- Part Two ---
  * You're worried you might not ever get your items back. So worried, in fact, that your relief that a monkey's
  * inspection didn't damage an item no longer causes your worry level to be divided by three.
