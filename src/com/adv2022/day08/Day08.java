@@ -66,30 +66,19 @@ public class Day08 {
             int count = 0;
 
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
-                int len = line.length();
                 for (int i = 0; i < line.length(); i++) {
                     stromy[i][lineNum] = Byte.parseByte(line.substring(i, i + 1));
                 }
                 lineNum++;
             }
-            System.out.println("--------");
-            System.out.println("checking visib");
 
             for (int x = 0; x < LINE_LENGTH; x++) {
                 for (int y = 0; y < LINES_COUNT; y++) {
-                    System.out.println("checking[" + x + "][" + y + "]");
+                    System.out.println("\nchecking [" + x + "][" + y + "]");
+                    System.out.println("value=" + stromy[x][y]);
                     if (isTreeVisible(x, y)) {
-                        setVisibility(x, y);
-                    }
-                }
-            }
-
-            for (int x = 0; x < LINE_LENGTH; x++) {
-                for (int y = 0; y < LINES_COUNT; y++) {
-                    //System.out.println("checking[" + x + "][" + y + "]");
-                    if (stromy[x][y] >= 16) {
                         count++;
+                        System.out.println("visible   " + count);
                     }
                 }
             }
@@ -104,13 +93,10 @@ public class Day08 {
     }
 
     static boolean isTreeVisible(int x, int y) {
-//        boolean ret = false;
         return checkLeft(x, y) || checkRight(x, y) || checkUp(x, y) || checkDown(x, y);
-        //return ret;
     }
 
     static boolean checkLeft(int x, int y) {
-        System.out.println("left");
         byte vyskaNasehoStromu = getHeight(x, y);
         if (x == 0) {
             return true;
@@ -125,14 +111,11 @@ public class Day08 {
     }
 
     static boolean checkRight(int x, int y) {
-        System.out.println("right");
         byte vyskaNasehoStromu = getHeight(x, y);
         if (x == LINE_LENGTH) {
             return true;
         } else {
-            //System.out.println("cycling");
             for (int i = x + 1; i < LINE_LENGTH; i++) {
-                //System.out.println("i=" + i);
                 if (vyskaNasehoStromu <= getHeight(i, y)) {
                     return false;
                 }
@@ -142,7 +125,6 @@ public class Day08 {
     }
 
     static boolean checkUp(int x, int y) {
-        System.out.println("up");
         byte vyskaNasehoStromu = getHeight(x, y);
         if (y == 0) {
             return true;
@@ -157,7 +139,6 @@ public class Day08 {
     }
 
     static boolean checkDown(int x, int y) {
-        System.out.println("down");
         byte vyskaNasehoStromu = getHeight(x, y);
         if (y == 0) {
             return true;
@@ -173,17 +154,5 @@ public class Day08 {
 
     static byte getHeight(int x, int y) {
         return (byte) (stromy[x][y] & 111);
-    }
-
-    static boolean getVisibility(int x, int y) {
-        byte h = (byte) (stromy[x][y] & 16);
-        if (h == 16) {
-            return true;
-        }
-        return false;
-    }
-
-    static void setVisibility(int x, int y) {
-        stromy[x][y] = (byte) (stromy[x][y] | 16);
     }
 }
